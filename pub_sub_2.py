@@ -6,6 +6,7 @@ nc = NATS()
 
 async def message_handler(msg):
     print(f"Core NATS 2 received a message: {msg.data.decode()}")
+    print("Test")
     await msg.ack()
 
 async def run(loop):
